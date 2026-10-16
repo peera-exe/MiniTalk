@@ -96,6 +96,7 @@ app.post('/api/register', async (req, res) => {
 // Login
 app.post('/api/login', async (req, res) => {
   const { username, password } = req.body;
+  console.log('[DEBUG] login request:', { username });
   if (!username || !password) {
     return res.status(400).json({ error: 'กรุณากรอก Username และ Password' });
   }
